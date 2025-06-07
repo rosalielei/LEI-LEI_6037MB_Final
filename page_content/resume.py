@@ -38,8 +38,5 @@ def resume_page():
             mime="application/pdf"
         )
         
-        # 添加PDF图片预览
-        st.header("Resume Preview")
-        st.image("static/docs/resume.pdf", caption="Resume Preview", use_column_width=True)
     else:
         st.error("The PDF file was not found. Please ensure that 'resume.pdf' exists in the static/docs directory.")
