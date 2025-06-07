@@ -38,10 +38,8 @@ def resume_page():
             mime="application/pdf"
         )
         
-        # 添加PDF预览
+        # 添加PDF图片预览
         st.header("Resume Preview")
-        base64_pdf = base64.b64encode(PDFbyte).decode('utf-8')
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
-        st.markdown(pdf_display, unsafe_allow_html=True)
+        st.image("static/docs/resume.pdf", caption="Resume Preview", use_column_width=True)
     else:
         st.error("The PDF file was not found. Please ensure that 'resume.pdf' exists in the static/docs directory.")
